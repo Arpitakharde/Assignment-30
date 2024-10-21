@@ -4,8 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment-30</title>
+    <style>
+
+      .card{
+        height:170px;
+        width:200px;
+        border:5px double black;
+      }
+      .bg-red{
+        background-color: red;
+      }
+      .bg-green{
+        background-color: green;
+      }
+
+    </style>
 </head>
 <body>
     
+
+    <div class="card" id="card">
+
+    </div>
+
+    <br/>
+
+    <button type="button" onclick="makeRed()">red</button>
+
+
+    <button type="button" onclick="makeGreen()">green</button>
+  
+    <script>
+    
+    const cardElement=document.getElementById("card");
+    function makeRed(){
+        cardElement.classList.remove('bg-green');
+        cardElement.classList.add('bg-red');
+    }
+
+    function makeGreen(){
+        cardElement.classList.remove('bg-red');
+        cardElement.classList.add('bg-green');
+    }
+    </script>
 </body>
 </html>
