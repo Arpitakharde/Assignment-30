@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment-30</title>
     <style>
-
+      .body{
+        display: flex;
+        justify-content: center;
+        padding: 50px 50px;
+      }
       .card{
         height:320px;
         width:250px;
@@ -58,7 +62,7 @@
 
     </style>
 </head>
-<body>
+<body class="body">
     
 
     <div class="card" id="card">
@@ -67,39 +71,32 @@
       <p class="product-prise"> <b>prise:</b> ₹68,000</p>
 
       <div class="icon-container">
-        <img src="./img/minus.png" class="plus-minus-icon" alt="minus symbol">
-        <span>1</span>
-        <img src="./img/plus.png" class="plus-minus-icon" alt="plus symbol">
+        <img src="./img/minus.png" class="plus-minus-icon" onclick="decreaseitem()" alt="minus symbol">
+        <span id="quantity">1</span>
+        <img src="./img/plus.png" class="plus-minus-icon" onclick="increaseitem()" alt="plus symbol">
       </div>
 
       <button type="button" class="button" onclick="">buy now</button>
 
     </div>
     <br/>
-
-
-
-
-   
     <script>
     
-    const cardElement=document.getElementById("card");
+    const quantityElement=document.getElementById("quantity");
 
-    function increase-item(){
-        cardElement.classList.remove('bg-green');
-        cardElement.classList.add('bg-red');
+    function increaseitem(){
+       let quantity=parseInt(quantityElement.innerText);
+       quantity=quantityElement.innerText =++quantity;
+
     }
 
-    function decrease-item(){
-        cardElement.classList.remove('bg-red');
-        cardElement.classList.add('bg-green');
+    function decreaseitem(){
+        let quantity=parseInt(quantityElement.innerText);
+        if(quantity>1){
+        quantity=quantityElement.innerText =--quantity;  
     }
 
-    function makeblue(){
-        cardElement.classList.remove('bg-green'); 
-        cardElement.classList.remove('bg-red');
-        cardElement.classList.add('bg-blue');
-    }
+    }   
     </script>
 </body>
 </html>
