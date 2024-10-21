@@ -11,18 +11,8 @@
         width:200px;
         border:5px double black;
       }
-      .bg-red{
-        background-color: red;
-      }
-      .bg-green{
-        background-color: green;
-      }
-     .rounded{
-        border-radius: 7px;
-     }
-     .shadow{
-        box-shadow: #f0f0f0 3px 1px;
-     }
+     
+     
 
     </style>
 </head>
@@ -30,19 +20,17 @@
     
 
     <div class="card" id="card">
-
+      <img src="./../image/macbook.avif"  id="image"  alt="laptop img">
     </div>
-
     <br/>
-
     <button type="button" onclick="makeRed()">red</button>
-
-
     <button type="button" onclick="makeGreen()">green</button>
+    <button type="button" onclick="makeblue()">blue</button>
   
     <script>
     
     const cardElement=document.getElementById("card");
+
     function makeRed(){
         cardElement.classList.remove('bg-green');
         cardElement.classList.add('bg-red');
@@ -51,6 +39,12 @@
     function makeGreen(){
         cardElement.classList.remove('bg-red');
         cardElement.classList.add('bg-green');
+    }
+
+    function makeblue(){
+        cardElement.classList.remove('bg-green'); 
+        cardElement.classList.remove('bg-red');
+        cardElement.classList.add('bg-blue');
     }
     </script>
 </body>
