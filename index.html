@@ -7,15 +7,28 @@
     <style>
 
       .card{
-        height:170px;
-        width:200px;
-        border:5px double black;
-        
+        height:270px;
+        width:250px;
+        border:2px solid none;
+        border-radius: 7px;
+        text-align: center;
+        background-color: #f2f2f2;
       }
      
       #image{
-        height:170px;
-        width:200px;
+        height:150px;
+        width:180px;
+        margin:10px auto;
+       
+        border-radius: 7px;
+        display: block;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .button{
+        background-color:#ff6600 ;
+        color:white;
       }
      
 
@@ -26,8 +39,16 @@
 
     <div class="card" id="card">
       <img src="./image/macbook.avif"  id="image"  alt="laptop img">
+      <h2 class="product-title">macbook</h2>
+      <p class="product-prise">prise: ₹68,000</p>
+      <button type="button" class="button" onclick="()">buy now</button>
+
     </div>
     <br/>
+
+
+
+
     <button type="button" onclick="makeRed()">red</button>
     <button type="button" onclick="makeGreen()">green</button>
     <button type="button" onclick="makeblue()">blue</button>
