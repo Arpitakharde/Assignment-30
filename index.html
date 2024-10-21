@@ -7,12 +7,13 @@
     <style>
 
       .card{
-        height:300px;
+        height:320px;
         width:250px;
         border:2px solid #e6f2ff;
         border-radius: 7px;
         text-align: center;
         background-color: white;
+       
         
 
       }
@@ -41,10 +42,19 @@
         width:100px;
         border-radius: 20px;
         border:none;
-        margin:3px 10px;
+        margin:3px 5px;
         cursor: pointer;
       }
-     
+
+      .plus-minus-icon{
+        height:20px;
+      }
+      .icon-container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+      }
 
     </style>
 </head>
@@ -52,9 +62,16 @@
     
 
     <div class="card" id="card">
-      <img src="./image/macbook.avif"  id="image"  alt="laptop img">
-      <h2 class="product-title">macbook</h2>
+      <img src="./img/laptop.jpg"  id="image"  alt="laptop img">
+      <h3 class="product-title">macbook</h3>
       <p class="product-prise"> <b>prise:</b> ₹68,000</p>
+
+      <div class="icon-container">
+        <img src="./img/minus.png" class="plus-minus-icon" alt="minus symbol">
+        <span>1</span>
+        <img src="./img/plus.png" class="plus-minus-icon" alt="plus symbol">
+      </div>
+
       <button type="button" class="button" onclick="">buy now</button>
 
     </div>
@@ -68,12 +85,12 @@
     
     const cardElement=document.getElementById("card");
 
-    function makeRed(){
+    function increase-item(){
         cardElement.classList.remove('bg-green');
         cardElement.classList.add('bg-red');
     }
 
-    function makeGreen(){
+    function decrease-item(){
         cardElement.classList.remove('bg-red');
         cardElement.classList.add('bg-green');
     }
